@@ -33,7 +33,7 @@ public class RemoteServerInfo {
 	}
 
 	private final int serverID;
-	private final BigInteger lowerBound;
+	private BigInteger lowerBound;
 	private BigInteger greaterBound;
 
 	private static final Queue<RemoteServerInfo> remoteServerInfoQueue = new LinkedBlockingQueue<RemoteServerInfo>();
@@ -165,7 +165,10 @@ public class RemoteServerInfo {
 		return null;
 	}
 
+	private static RemoteServerInfo masterRemoteServerInfo = new RemoteServerInfo(0, new BigInteger("0"), new BigInteger("0"));
 	public static RemoteServerInfo getFromID(int i) {
+		if (i==0)
+			return masterRemoteServerInfo;
 		for (RemoteServerInfo rsi:allRemoteServerInfos)
 			if (rsi.serverID == i)
 				return rsi;
