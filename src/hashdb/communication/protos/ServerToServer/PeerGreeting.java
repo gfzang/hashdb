@@ -24,15 +24,6 @@ public class PeerGreeting
 	 */
 	private static final PeerGreeting instance = new PeerGreeting();
 
-	static {
-		try {
-			BaseProto.putProto(PeerGreeting.instance);
-		} catch (final MultipleProtoCodeException e) {
-			BaseProto.log.error(e);
-			throw new SomethingWentHorriblyWrong();
-		}
-	}
-
 	/**
 	 * Gets the single instance of PeerGreeting.
 	 *

@@ -18,15 +18,6 @@ public class ClientGreeting
 		extends BaseProto {
 	private static final ClientGreeting instance = new ClientGreeting();
 
-	static {
-		try {
-			BaseProto.putProto(ClientGreeting.instance);
-		} catch (final MultipleProtoCodeException e) {
-			BaseProto.log.error(e);
-			throw new SomethingWentHorriblyWrong();
-		}
-	}
-
 	public static ClientGreeting getInstance() {
 		return instance;
 	}

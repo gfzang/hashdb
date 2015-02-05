@@ -60,7 +60,6 @@ public abstract class Server {
 			final String name = this.getName();
 			Server.log.info(name + " started! Point zero:" + new Date());
 
-			BaseProto.initProtos();
 			Server.log.info("Protos should now be initialised!");
 
 			this.initialiseWorkerThreads(args);

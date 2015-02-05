@@ -36,15 +36,6 @@ public class DataTransferRequest extends BaseProto{
 
 	private static final DataTransferRequest instance = new DataTransferRequest();
 
-	static {
-		try {
-			BaseProto.putProto(DataTransferRequest.instance);
-		} catch (final MultipleProtoCodeException e) {
-			BaseProto.log.error(e);
-			throw new SomethingWentHorriblyWrong();
-		}
-	}
-
     public static DataTransferRequest getInstance() {
 		return instance;
 	}

@@ -21,14 +21,6 @@ public class ClientGoodbye
 
 	private static final ClientGoodbye instance = new ClientGoodbye();
 
-	static {
-		try {
-			BaseProto.putProto(ClientGoodbye.instance);
-		} catch (final MultipleProtoCodeException e) {
-			BaseProto.log.error(e);
-			throw new SomethingWentHorriblyWrong();
-		}
-	}
 
 	public static ClientGoodbye getInstance() {
 		return instance;

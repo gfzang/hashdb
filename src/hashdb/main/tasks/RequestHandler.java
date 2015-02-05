@@ -1,10 +1,12 @@
 package hashdb.main.tasks;
 
 import org.apache.log4j.Logger;
+
 import hashdb.Settings;
 import hashdb.Utilities;
 import hashdb.communication.ConnectionInstance;
 import hashdb.communication.protos.BaseProto;
+import hashdb.communication.protos.ProtoMap;
 import hashdb.exceptions.ConnectionNotActiveException;
 import hashdb.exceptions.SomethingWentHorriblyWrong;
 import hashdb.exceptions.UnknownProtoException;
@@ -61,7 +63,7 @@ public class RequestHandler
             if (!ci.hasRequest())
                 return;
 			this.ci.receive(req);
-			bp = BaseProto.getProto(req[0]);
+			bp = ProtoMap.getInstance().getProto(req[0]);
 			if (bp == null) throw new UnknownProtoException();
 			log.info("Invocation of " + bp.getName() + " started!");
 			bp.invoke(req, this.ci, this.server);

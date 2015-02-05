@@ -21,15 +21,6 @@ public class Callback extends BaseProto {
 	 */
 	private static final Callback instance = new Callback();
 
-	static {
-		try {
-			BaseProto.putProto(instance);
-		} catch (final MultipleProtoCodeException e) {
-			BaseProto.log.error(e);
-			throw new SomethingWentHorriblyWrong();
-		}
-	}
-
 	/**
 	 * Gets the single instance of PeerGreeting.
 	 *

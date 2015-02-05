@@ -19,15 +19,6 @@ import hashdb.main.tasks.forwarding.ForwardingTask;
 public class JobResponse extends BaseProto {
 	private static final JobResponse instance = new JobResponse();
 
-	static {
-		try {
-			BaseProto.putProto(instance);
-		} catch (final MultipleProtoCodeException e) {
-			BaseProto.log.error(e);
-			throw new SomethingWentHorriblyWrong();
-		}
-	}
-
 	@Override
 	public short getCode() {
 		return 8;

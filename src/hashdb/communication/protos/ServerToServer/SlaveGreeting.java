@@ -26,15 +26,6 @@ public class SlaveGreeting
 	 */
 	private static final SlaveGreeting instance = new SlaveGreeting();
 
-	static {
-		try {
-			BaseProto.putProto(SlaveGreeting.instance);
-		} catch (final MultipleProtoCodeException e) {
-			BaseProto.log.error(e);
-			throw new SomethingWentHorriblyWrong();
-		}
-	}
-
 	/**
 	 * Gets the single instance of SlaveGreeting.
 	 *

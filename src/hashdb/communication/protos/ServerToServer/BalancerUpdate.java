@@ -19,15 +19,6 @@ public class BalancerUpdate extends BaseProto {
 
 	private static final BalancerUpdate instance = new BalancerUpdate();
 
-	static {
-		try {
-			BaseProto.putProto(BalancerUpdate.instance);
-		} catch (final MultipleProtoCodeException e) {
-			BaseProto.log.error(e);
-			throw new SomethingWentHorriblyWrong();
-		}
-	}
-
 	public static BalancerUpdate getInstance() {return instance;}
 
 	@Override

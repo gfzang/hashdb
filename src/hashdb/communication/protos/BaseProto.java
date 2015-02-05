@@ -24,61 +24,13 @@ public abstract class BaseProto {
 	 */
 	protected static final Logger log = Logger.getLogger(BaseProto.class);
 
-	/**
-	 * The Constant allProtos.
-	 */
-	private static final ConcurrentHashMap<Short, BaseProto> allProtos = new ConcurrentHashMap<Short, BaseProto>();
-
-	/**
-	 * Gets the proto.
-	 *
-	 * @param req the req
-	 * @return the proto
-	 */
-	public static BaseProto getProto(final short req) {
-		return BaseProto.allProtos.get(req);
-	}
-
-	/**
-	 * Inits the protos.
-	 */
-	public static void initProtos() {
-		init(SlaveGreeting.getInstance());
-		init(ClientGoodbye.getInstance());
-		init(ClientGreeting.getInstance());
-		init(ConnectionKeepAlive.getInstance());
-		init(PeerGreeting.getInstance());
-		init(SlaveDistribute.getInstance());
-		init(BalancerUpdate.getInstance());
-		init(Callback.getInstance());
-		init(DataTransferRequest.getInstance());
-		init(JobResponse.getInstance());
-	}
-
-	private static void init(BaseProto bp) {
-		BaseProto.log.info(bp.getName() + " loaded");
-	}
-
-	/**
-	 * Put proto.
-	 *
-	 * @param bp the bp
-	 * @throws MultipleProtoCodeException the multiple proto code exception
-	 */
-	protected static void putProto(final BaseProto bp) throws MultipleProtoCodeException {
-		final short key = bp.getCode();
-		final BaseProto tmp = BaseProto.allProtos.get(key);
-		if (tmp != null) {
-			if (tmp != bp)
-			// log.error("Same code used for multiple protos: "+(int)key+" for both "+bp.getName()+" and "+tmp.getName());
-			{
-				throw new MultipleProtoCodeException();
-			} else {
-				BaseProto.log.debug("Same proto added multiple times");
-			}
+	protected BaseProto() {
+		try {
+			ProtoMap.getInstance().putProto(this);
+		} catch (MultipleProtoCodeException e) {
+			log.error(getName() + " already loaded");
 		}
-
-		BaseProto.allProtos.put(key, bp);
+		BaseProto.log.info(getName() + " loaded");
 	}
 
 	/**

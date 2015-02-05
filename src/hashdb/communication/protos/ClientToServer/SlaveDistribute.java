@@ -22,15 +22,6 @@ public class SlaveDistribute
 	private static final SlaveDistribute instance = new SlaveDistribute();
 	private static final Balancer BALANCER_INSTANCE = Balancer.getInstance();
 
-	static {
-		try {
-			BaseProto.putProto(SlaveDistribute.instance);
-		} catch (final MultipleProtoCodeException e) {
-			BaseProto.log.error(e);
-			throw new SomethingWentHorriblyWrong();
-		}
-	}
-
 	public static SlaveDistribute getInstance() {
 		return instance;
 	}

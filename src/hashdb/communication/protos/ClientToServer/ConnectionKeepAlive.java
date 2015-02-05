@@ -23,15 +23,6 @@ public class ConnectionKeepAlive
 	 */
 	private static final ConnectionKeepAlive instance = new ConnectionKeepAlive();
 
-	static {
-		try {
-			BaseProto.putProto(ConnectionKeepAlive.instance);
-		} catch (final MultipleProtoCodeException e) {
-			BaseProto.log.error(e);
-			throw new SomethingWentHorriblyWrong();
-		}
-	}
-
 	public static ConnectionKeepAlive getInstance() {
 		return instance;
 	}
