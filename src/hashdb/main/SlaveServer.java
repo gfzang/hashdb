@@ -1,6 +1,5 @@
 package hashdb.main;
 
-import org.apache.log4j.Logger;
 import hashdb.Settings;
 import hashdb.exceptions.MultipleSingletonInstance;
 import hashdb.exceptions.SomethingWentHorriblyWrong;
@@ -9,6 +8,8 @@ import hashdb.main.threads.DiskManager;
 import hashdb.main.threads.WorkerThread;
 
 import java.util.Date;
+
+import org.apache.log4j.Logger;
 
 
 /**

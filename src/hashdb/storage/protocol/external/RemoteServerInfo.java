@@ -1,7 +1,5 @@
 package hashdb.storage.protocol.external;
 
-import org.apache.log4j.Logger;
-
 import hashdb.communication.ServerConnectionInstance;
 import hashdb.exceptions.NoSuchServerException;
 import hashdb.exceptions.SettingIsNotIntroductionException;
@@ -14,6 +12,8 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Random;
 import java.util.concurrent.LinkedBlockingQueue;
+
+import org.apache.log4j.Logger;
 
 /**
  * Created with IntelliJ IDEA.

@@ -1,7 +1,5 @@
 package hashdb.communication;
 
-import org.apache.log4j.Logger;
-
 import hashdb.Utilities;
 import hashdb.communication.protos.ServerToServer.PeerGreeting;
 import hashdb.communication.protos.ServerToServer.SlaveGreeting;
@@ -17,6 +15,8 @@ import hashdb.storage.protocol.external.RemoteServerInfo;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.LinkedList;
+
+import org.apache.log4j.Logger;
 
 
 

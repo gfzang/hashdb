@@ -3,8 +3,6 @@ package hashdb.communication.protos.ServerToServer;
 import hashdb.communication.ConnectionInstance;
 import hashdb.communication.protos.BaseProto;
 import hashdb.exceptions.ConnectionNotActiveException;
-import hashdb.exceptions.MultipleProtoCodeException;
-import hashdb.exceptions.SomethingWentHorriblyWrong;
 import hashdb.main.Server;
 import hashdb.main.structures.RemoteTaskPool;
 import hashdb.main.tasks.forwarding.ForwardingTask;

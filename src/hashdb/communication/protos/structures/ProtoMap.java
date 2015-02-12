@@ -1,11 +1,20 @@
-package hashdb.communication.protos;
+package hashdb.communication.protos.structures;
 
+import hashdb.communication.protos.BaseProto;
+import hashdb.communication.protos.ClientToServer.ClientGoodbye;
+import hashdb.communication.protos.ClientToServer.ClientGreeting;
+import hashdb.communication.protos.ClientToServer.ConnectionKeepAlive;
 import hashdb.exceptions.MultipleProtoCodeException;
 
 import java.util.concurrent.ConcurrentHashMap;
 
-public class ProtoMap {
+import org.apache.log4j.Logger;
 
+public class ProtoMap{
+
+
+	protected static final Logger log = Logger.getLogger(BaseProto.class);
+	
 	private final ConcurrentHashMap<Short, BaseProto> allProtos = new ConcurrentHashMap<Short, BaseProto>();
 	
 	public BaseProto getProto(final short req) {
@@ -21,7 +30,7 @@ public class ProtoMap {
 			{
 				throw new MultipleProtoCodeException();
 			} else {
-				BaseProto.log.debug("Same proto added multiple times");
+				log.debug("Same proto added multiple times");
 			}
 		}
 
@@ -35,5 +44,6 @@ public class ProtoMap {
 	}
 	
 	private ProtoMap()
-	{}
+	{
+	}
 }

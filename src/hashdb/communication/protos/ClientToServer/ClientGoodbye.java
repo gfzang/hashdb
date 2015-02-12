@@ -3,8 +3,6 @@ package hashdb.communication.protos.ClientToServer;
 import hashdb.Utilities;
 import hashdb.communication.ConnectionInstance;
 import hashdb.communication.protos.BaseProto;
-import hashdb.exceptions.MultipleProtoCodeException;
-import hashdb.exceptions.SomethingWentHorriblyWrong;
 import hashdb.main.Server;
 import hashdb.main.tasks.TerminateConnectionTask;
 import hashdb.main.threads.WorkerThread;

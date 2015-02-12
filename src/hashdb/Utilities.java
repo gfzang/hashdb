@@ -1,7 +1,11 @@
 package hashdb;
 
 import hashdb.communication.ConnectionInstance;
-import hashdb.exceptions.*;
+import hashdb.exceptions.CannotCastException;
+import hashdb.exceptions.CannotReduceException;
+import hashdb.exceptions.ConnectionNotActiveException;
+import hashdb.exceptions.DifferentSizeOfArrayException;
+import hashdb.exceptions.ServerCommunicationException;
 
 
 

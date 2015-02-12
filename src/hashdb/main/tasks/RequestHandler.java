@@ -1,16 +1,16 @@
 package hashdb.main.tasks;
 
-import org.apache.log4j.Logger;
-
 import hashdb.Settings;
 import hashdb.Utilities;
 import hashdb.communication.ConnectionInstance;
 import hashdb.communication.protos.BaseProto;
-import hashdb.communication.protos.ProtoMap;
+import hashdb.communication.protos.structures.ProtoMap;
 import hashdb.exceptions.ConnectionNotActiveException;
 import hashdb.exceptions.SomethingWentHorriblyWrong;
 import hashdb.exceptions.UnknownProtoException;
 import hashdb.main.Server;
+
+import org.apache.log4j.Logger;
 
 
 

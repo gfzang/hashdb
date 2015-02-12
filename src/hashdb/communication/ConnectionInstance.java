@@ -1,7 +1,5 @@
 package hashdb.communication;
 
-import org.apache.log4j.Logger;
-
 import hashdb.Settings;
 import hashdb.Utilities;
 import hashdb.exceptions.ConnectionActiveException;
@@ -10,6 +8,8 @@ import hashdb.exceptions.ConnectionNotActiveException;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Date;
+
+import org.apache.log4j.Logger;
 
 
 

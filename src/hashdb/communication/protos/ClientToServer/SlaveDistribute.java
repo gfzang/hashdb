@@ -4,9 +4,11 @@ import hashdb.Utilities;
 import hashdb.communication.ConnectionInstance;
 import hashdb.communication.ServerConnectionInstance;
 import hashdb.communication.protos.BaseProto;
-import hashdb.exceptions.*;
-import hashdb.main.structures.balancers.Balancer;
+import hashdb.exceptions.ConnectionNotActiveException;
+import hashdb.exceptions.ServerCommunicationException;
+import hashdb.exceptions.UnrecoverableCommunicationException;
 import hashdb.main.Server;
+import hashdb.main.structures.balancers.Balancer;
 import hashdb.storage.protocol.external.RemoteServerInfo;
 
 /**

@@ -1,6 +1,5 @@
 package hashdb.main.tasks;
 
-import org.apache.log4j.Logger;
 import hashdb.Utilities;
 import hashdb.communication.ConnectionInstance;
 import hashdb.communication.protos.ServerToServer.BalancerUpdate;
@@ -9,6 +8,8 @@ import hashdb.exceptions.ServerCommunicationException;
 import hashdb.main.SlaveServer;
 import hashdb.main.threads.ConnectionManager;
 import hashdb.storage.protocol.external.RemoteServerInfo;
+
+import org.apache.log4j.Logger;
 
 /**
  * Created with IntelliJ IDEA.

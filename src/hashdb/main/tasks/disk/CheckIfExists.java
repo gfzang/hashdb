@@ -2,13 +2,13 @@ package hashdb.main.tasks.disk;
 
 import hashdb.Settings;
 import hashdb.Utilities;
-import hashdb.storage.entities.Entry;
-import hashdb.storage.entities.fields.EntryKeyLink;
 import hashdb.exceptions.DifferentSizeOfArrayException;
 import hashdb.main.tasks.response.ExistsResponseTask;
 import hashdb.main.threads.DiskManager;
 import hashdb.main.threads.WorkerThread;
 import hashdb.storage.EntryReaderWriter;
+import hashdb.storage.entities.Entry;
+import hashdb.storage.entities.fields.EntryKeyLink;
 
 public class CheckIfExists
 		extends DiskTask {

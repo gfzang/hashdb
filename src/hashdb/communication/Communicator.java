@@ -1,10 +1,14 @@
 package hashdb.communication;
 
-import org.apache.log4j.Logger;
 import hashdb.Utilities;
 import hashdb.exceptions.CannotCastException;
-import java.io.*;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
 import java.net.Socket;
+
+import org.apache.log4j.Logger;
 
 
 /**

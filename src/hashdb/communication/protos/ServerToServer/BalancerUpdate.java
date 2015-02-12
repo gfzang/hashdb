@@ -3,10 +3,8 @@ package hashdb.communication.protos.ServerToServer;
 import hashdb.Utilities;
 import hashdb.communication.ConnectionInstance;
 import hashdb.communication.protos.BaseProto;
-import hashdb.exceptions.MultipleProtoCodeException;
-import hashdb.exceptions.SomethingWentHorriblyWrong;
-import hashdb.main.structures.balancers.PreciseBalancer;
 import hashdb.main.Server;
+import hashdb.main.structures.balancers.PreciseBalancer;
 
 /**
  * Created with IntelliJ IDEA.

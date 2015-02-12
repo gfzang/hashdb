@@ -1,17 +1,12 @@
 package hashdb.communication.protos;
 
-import org.apache.log4j.Logger;
 import hashdb.communication.ConnectionInstance;
-import hashdb.communication.protos.ClientToServer.ClientGoodbye;
-import hashdb.communication.protos.ClientToServer.ClientGreeting;
-import hashdb.communication.protos.ClientToServer.ConnectionKeepAlive;
-import hashdb.communication.protos.ClientToServer.SlaveDistribute;
-import hashdb.communication.protos.ServerToServer.*;
+import hashdb.communication.protos.structures.ProtoMap;
 import hashdb.exceptions.MultipleProtoCodeException;
 import hashdb.exceptions.UnrecoverableCommunicationException;
 import hashdb.main.Server;
 
-import java.util.concurrent.ConcurrentHashMap;
+import org.apache.log4j.Logger;
 
 
 /**

@@ -1,10 +1,10 @@
 package hashdb.main.threads;
 
-import org.apache.log4j.Logger;
-
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+
+import org.apache.log4j.Logger;
 
 
 

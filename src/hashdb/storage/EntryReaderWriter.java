@@ -1,10 +1,10 @@
 package hashdb.storage;
 
 import hashdb.Settings;
-import hashdb.storage.entities.Entry;
-import hashdb.storage.entities.fields.EntryPart;
 import hashdb.exceptions.PositionOutOfBoundsException;
 import hashdb.exceptions.SomethingWentHorriblyWrong;
+import hashdb.storage.entities.Entry;
+import hashdb.storage.entities.fields.EntryPart;
 
 import java.io.IOException;
 

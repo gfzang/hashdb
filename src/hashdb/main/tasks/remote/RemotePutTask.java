@@ -1,6 +1,5 @@
 package hashdb.main.tasks.remote;
 
-import org.apache.log4j.Logger;
 import hashdb.Settings;
 import hashdb.Utilities;
 import hashdb.communication.ConnectionInstance;
@@ -8,6 +7,8 @@ import hashdb.communication.protos.DataTransferRequest;
 import hashdb.exceptions.ConnectionNotActiveException;
 import hashdb.main.tasks.Task;
 import hashdb.main.threads.WorkerThread;
+
+import org.apache.log4j.Logger;
 
 /**
  * Created with IntelliJ IDEA.

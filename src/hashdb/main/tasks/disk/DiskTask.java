@@ -1,13 +1,14 @@
 package hashdb.main.tasks.disk;
 
-import org.apache.log4j.Logger;
 import hashdb.Utilities;
-import hashdb.storage.entities.Entry;
 import hashdb.exceptions.DifferentSizeOfArrayException;
 import hashdb.main.tasks.Task;
 import hashdb.main.tasks.response.ResponseTask;
 import hashdb.main.threads.DiskManager;
+import hashdb.storage.entities.Entry;
 import hashdb.storage.protocol.internal.InternalProtocol;
+
+import org.apache.log4j.Logger;
 
 /**
  * Created with IntelliJ IDEA.

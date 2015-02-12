@@ -1,8 +1,8 @@
 package hashdb.main;
 
-import org.apache.log4j.Logger;
 import hashdb.Settings;
-import hashdb.communication.protos.BaseProto;
+import hashdb.communication.protos.structures.ProtoInitializationForcer;
+import hashdb.communication.protos.structures.ProtoMap;
 import hashdb.exceptions.SomethingWentHorriblyWrong;
 import hashdb.main.threads.ConnectionManager;
 import hashdb.main.threads.Receptionist;
@@ -10,6 +10,8 @@ import hashdb.main.threads.WorkerThread;
 import hashdb.storage.protocol.external.RemoteServerInfo;
 
 import java.util.Date;
+
+import org.apache.log4j.Logger;
 
 
 
@@ -60,6 +62,7 @@ public abstract class Server {
 			final String name = this.getName();
 			Server.log.info(name + " started! Point zero:" + new Date());
 
+			ProtoMap.getInstance();
 			Server.log.info("Protos should now be initialised!");
 
 			this.initialiseWorkerThreads(args);
@@ -69,9 +72,10 @@ public abstract class Server {
 			Server.log.info("Dedicated threads initialised");
 
 			this.serverSpecificInitialisation(args);
+			
+			new ProtoInitializationForcer().work();
 
 			this.startWorkers(args);
-			Server.log.info(name + " operational");
 
 			RemoteServerInfo.getBase(Settings.Fields.KEY.getSize());
 

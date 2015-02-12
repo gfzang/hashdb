@@ -1,6 +1,5 @@
 package hashdb.main.threads;
 
-import org.apache.log4j.Logger;
 import hashdb.communication.ConnectionInstance;
 import hashdb.exceptions.ConnectionActiveException;
 import hashdb.exceptions.SomethingWentHorriblyWrong;
@@ -10,6 +9,8 @@ import hashdb.main.tasks.RequestHandler;
 import java.net.Socket;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
+
+import org.apache.log4j.Logger;
 
 
 

@@ -1,6 +1,5 @@
 package hashdb.main.tasks.setup;
 
-import org.apache.log4j.Logger;
 import hashdb.Utilities;
 import hashdb.communication.ServerConnectionInstance;
 import hashdb.exceptions.CannotCastException;
@@ -12,6 +11,8 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
+
+import org.apache.log4j.Logger;
 
 
 

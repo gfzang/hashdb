@@ -1,7 +1,8 @@
 package hashdb.main.tasks.response;
 
-import org.apache.log4j.Logger;
 import hashdb.main.tasks.Task;
+
+import org.apache.log4j.Logger;
 
 
 /**

@@ -1,10 +1,11 @@
 package hashdb.main.threads;
 
-import org.apache.log4j.Logger;
 import hashdb.main.tasks.Task;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
+
+import org.apache.log4j.Logger;
 
 
 

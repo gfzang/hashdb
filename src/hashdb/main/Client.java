@@ -1,19 +1,24 @@
 package hashdb.main;
 
-import org.apache.log4j.Logger;
 import hashdb.Settings;
 import hashdb.Utilities;
 import hashdb.communication.ConnectionInstance;
+import hashdb.communication.protos.DataTransferRequest;
 import hashdb.communication.protos.ClientToServer.ClientGoodbye;
 import hashdb.communication.protos.ClientToServer.ClientGreeting;
 import hashdb.communication.protos.ClientToServer.ConnectionKeepAlive;
 import hashdb.communication.protos.ClientToServer.SlaveDistribute;
-import hashdb.communication.protos.DataTransferRequest;
-import hashdb.exceptions.*;
+import hashdb.exceptions.CannotCastException;
+import hashdb.exceptions.ConnectionActiveException;
+import hashdb.exceptions.ConnectionNotActiveException;
+import hashdb.exceptions.ServerCommunicationException;
+import hashdb.exceptions.SomethingWentHorriblyWrong;
 
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
+
+import org.apache.log4j.Logger;
 
 /**
  * Created with IntelliJ IDEA.

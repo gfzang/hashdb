@@ -4,7 +4,8 @@ import hashdb.Settings;
 import hashdb.Utilities;
 import hashdb.communication.ConnectionInstance;
 import hashdb.communication.protos.BaseProto;
-import hashdb.exceptions.*;
+import hashdb.exceptions.CannotCastException;
+import hashdb.exceptions.ConnectionNotActiveException;
 import hashdb.main.Server;
 import hashdb.storage.protocol.external.RemoteServerInfo;
 

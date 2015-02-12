@@ -1,6 +1,5 @@
 package hashdb.main.tasks.forwarding;
 
-import org.apache.log4j.Logger;
 import hashdb.Settings;
 import hashdb.Utilities;
 import hashdb.communication.ConnectionInstance;
@@ -8,6 +7,8 @@ import hashdb.exceptions.ConnectionNotActiveException;
 import hashdb.exceptions.ServerCommunicationException;
 import hashdb.exceptions.SomethingWentHorriblyWrong;
 import hashdb.main.threads.WorkerThread;
+
+import org.apache.log4j.Logger;
 
 /**
  * Created with IntelliJ IDEA.

@@ -1,9 +1,9 @@
 package hashdb.main.tasks.setup;
 
-import org.apache.log4j.Logger;
 import hashdb.Settings;
 import hashdb.communication.ServerConnectionInstance;
-import hashdb.exceptions.*;
+import hashdb.exceptions.NotSlaveServer;
+import hashdb.exceptions.SettingIsNotIntroductionException;
 import hashdb.main.Server;
 import hashdb.main.SlaveServer;
 import hashdb.main.tasks.Task;
@@ -11,6 +11,8 @@ import hashdb.storage.protocol.external.RemoteServerInfo;
 
 import java.io.IOException;
 import java.net.Socket;
+
+import org.apache.log4j.Logger;
 
 
 

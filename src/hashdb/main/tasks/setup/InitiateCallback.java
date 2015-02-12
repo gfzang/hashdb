@@ -1,6 +1,5 @@
 package hashdb.main.tasks.setup;
 
-import org.apache.log4j.Logger;
 import hashdb.Utilities;
 import hashdb.communication.ConnectionInstance;
 import hashdb.communication.protos.ServerToServer.Callback;
@@ -8,6 +7,8 @@ import hashdb.exceptions.ConnectionNotActiveException;
 import hashdb.exceptions.ServerCommunicationException;
 import hashdb.main.Server;
 import hashdb.main.tasks.Task;
+
+import org.apache.log4j.Logger;
 
 /**
  * Created with IntelliJ IDEA.

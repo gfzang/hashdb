@@ -1,9 +1,9 @@
 package hashdb.test;
 
 import hashdb.Settings;
-import hashdb.storage.entities.Entry;
 import hashdb.storage.EntryReaderWriter;
 import hashdb.storage.PersistentStorage;
+import hashdb.storage.entities.Entry;
 
 import java.io.IOException;
 

@@ -1,23 +1,24 @@
 package hashdb.main.threads;
 
-import org.apache.log4j.Logger;
 import hashdb.Settings;
 import hashdb.Utilities;
-import hashdb.storage.entities.Entry;
 import hashdb.exceptions.DifferentSizeOfArrayException;
 import hashdb.exceptions.InconsistentSettingsException;
 import hashdb.exceptions.MultipleSingletonInstance;
 import hashdb.main.tasks.disk.DiskTask;
-import hashdb.storage.protocol.internal.DoubleHashProtocol;
-import hashdb.storage.protocol.internal.InternalProtocol;
 import hashdb.storage.EntryReaderWriter;
 import hashdb.storage.PersistentStorage;
+import hashdb.storage.entities.Entry;
+import hashdb.storage.protocol.internal.DoubleHashProtocol;
+import hashdb.storage.protocol.internal.InternalProtocol;
 
 import java.io.IOException;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingDeque;
+
+import org.apache.log4j.Logger;
 
 /**
  * Created with IntelliJ IDEA.
