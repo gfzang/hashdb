@@ -10,7 +10,7 @@ import org.apache.log4j.Logger;
 
 
 /**
- * The Class BaseProto.
+ * Base class for all proto classes.
  */
 public abstract class BaseProto {
 
@@ -43,7 +43,9 @@ public abstract class BaseProto {
 	public abstract String getName();
 
 	/**
-	 * Invoke.
+	 * Does actual job.
+	 * 
+	 * TODO: merge this with Task
 	 *
 	 * @param data   the data
 	 * @param ci     the ci
@@ -52,7 +54,7 @@ public abstract class BaseProto {
 	public abstract void invoke(short[] data, ConnectionInstance ci, Server server);
 
 	/**
-	 * Sanity check.
+	 * Sanity check to force 
 	 *
 	 * @param data the data
 	 * @param ci   the ci

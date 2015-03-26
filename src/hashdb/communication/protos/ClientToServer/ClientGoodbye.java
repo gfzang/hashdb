@@ -8,11 +8,7 @@ import hashdb.main.tasks.TerminateConnectionTask;
 import hashdb.main.threads.WorkerThread;
 
 /**
- * Created with IntelliJ IDEA.
- * User: filip
- * Date: 5/8/13
- * Time: 11:58 AM
- * To change this template use File | Settings | File Templates.
+ * Disconnects client from database.
  */
 public class ClientGoodbye
 		extends BaseProto {
